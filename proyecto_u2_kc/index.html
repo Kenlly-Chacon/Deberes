@@ -1,41 +1,59 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+  <title>Estudiantes</title>
+  <meta name="description" content="En esta pagina se pueden agregar un numero indefinido de estudiantes">
+  <meta name="author" content="Kenlly-Chacon">
+  <meta name="keywords" content="Estudiantes, lista de estudiantes">
+  <meta name="google-site-verification" content="">
+  <meta name="googlebot" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="/css/estudiantes.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
+
 <body>
+<header>
+  <h1>Listado de Estudiantes</h1>
+</header>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<nav>
+</nav>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<section>
+  <div id="myApp">
+    <h2>Datos del estudiante</h2>
+    <label id="id_nombre" for="input_id_nombre">Nombre: </label>    <br>
+    <input id="input_id_nombre" type="text" v-model="nombres">    <br>
+    <label id="id_apellido" for="input_id_apellido">Apellido: </label>    <br>
+    <input id="input_id_apellido" type="text" v-model="apellidos">    <br>
+    <label id="id_direccion" for="input_id_direccion">Direccion: </label>    <br>
+    <input id="input_id_direccion" type="text" v-model="direccions">    <br>
+    <button v-on:click="agregarLista">Agregar</button>    <br>
+    <hr>
+    <h2>Lista</h2>
+    <ul>
+      <li v-for="({nombre,apellido,direccion},index) in arregloEstudiante">
+        <span>Estudiante Nº{{index+1}}: </span>
+        <blockquote>Nombre: {{nombre}}</blockquote>
+        <blockquote>Apellido: {{apellido}}</blockquote>
+        <blockquote>Direccion: {{direccion}}</blockquote>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Derechos Reservados 2022-2023
+</footer>
+
+<script src="/js/listaEstudiantes.js"></script>
 </body>
 
 </html>

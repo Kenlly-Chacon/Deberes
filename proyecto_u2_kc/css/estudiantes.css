@@ -1,0 +1,66 @@
+header,nav,section,footer,aside,article{
+  display: block;
+}
+
+#myApp{
+  background-color: blue;
+  border: solid;
+  font-family: "Times New Roman", Times, serif;
+
+  display: block;
+  width: 40%;
+  margin: 20px auto;
+  font-size: 17px;
+  padding: 7px;
+  /*text-align: center;*/
+  border-radius: 10px;
+}
+
+section input,label{
+  text-align: center;
+  display: block;
+  width: 40%;
+  margin: 0px auto;
+  font-size: 18px;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+h1{
+  margin: 25px;
+  text-align: center;
+}
+
+footer{
+  font-size: 18px;
+  margin: 25px auto;
+  clear: both;
+}
+
+section button{
+  padding:15px;
+  margin: 25px auto;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 25%;
+  background-color: royalblue;
+}
+
+
+body{
+  background-color: cornflowerblue;
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: darkblue; /* Green */
+  color: white;
+}
+
+
+
